@@ -78,11 +78,41 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+//var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+var len= sumArr.length ;
+
+var som=0;
+var message='';
+
+for   (var i=0; i<len;i++ )
+{
+ som = sum(sumArr[i], som)[0];
+
+ if(i===len-1){
+    message+= sumArr[i];
+    
+ }else{
+    message+= sumArr[i]+',';
+ }
+
+ }
+ 
+ message= message+   '  was passed in as an array of numbers, and '+ som +' is their sum';
+ console.log(message);
+return [som ,message ];
+
 }
+ 
+
+
+//for(var x=0 ;x<len; x++) {
+
+// return (numb,sumArr[x] + 'was passed in as an array of numbers, and ' + numb +'is their sum');
+    
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
