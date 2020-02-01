@@ -29,7 +29,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-    var themulti=a*b ;
+    var themulti=a*b;
     var message = ('The product of ' + a + ' and '+ b + ' is ' + themulti);
 return [themulti,message];
 }
@@ -52,6 +52,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    var element1= sum (sum(a,b)[0],c)[0];
+    var element2=  multiply(multiply(a,b)[0],c)[0];
+   var element3= ( + a +   ' and '+ b +' and ' + c + 'sum to ' + element1 );
+   var element4=( ' The product of ' + a +  ' and ' + b + 'and '  +c+ ' is ' + element2 );
+
+return [element1,element2,element3,element4];
+
 
 }
 
