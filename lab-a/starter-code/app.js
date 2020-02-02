@@ -132,8 +132,32 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+   //eslint-disable-line
 
-}
+        var leng= multArr.length ;
+        
+        var mult=1;
+        var mess='';
+        
+        for   (var i=0; i<leng;i++ )
+        {
+      mult = multiply(multArr[i], mult)[0];
+        
+         if(i===leng-1){
+            mess+= multArr[i];
+            
+         }else{
+            mess+= multArr[i]+',';
+         }
+        
+         }
+         
+         mess =    '  The numbers ' + mess+ ' have a product of  '+mult ;
+         console.log(mess);
+        return [mult ,mess ];
+        
+        }
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
